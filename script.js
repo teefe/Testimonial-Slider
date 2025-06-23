@@ -2,13 +2,22 @@ const qouteArea = document.querySelector(".graph");
 
 let imagesCenter = ["images/buggatti.jpeg","images/camero.jpeg","images/lambo.jpeg"];
 
-let statements = ["buggatti is the best car from europe, cheers","Americans got a great idea on developing camero","lambo is just super fast"];
+let statements = ["Bugatti is a French luxury hyper sports car manufacturer, renowned for its high-performance vehicles. Founded in 1909 by Ettore Bugatti",
+                    "The Chevrolet Camaro is a popular American pony car known for its performance and classic design. It was first introduced in 1967 to compete with the Ford Mustang,",
+                    "Lamborghini, an Italian brand known for its high-performance sports cars, was founded in 1963 by Ferruccio Lamborghini."];
 
-function qouteDislay(){
-    let qouteCounter = 0;
-    qouteArea.textContent = statements[qouteCounter];
+function qouteDislay(count){
+    let qouteCounter = count;
     console.log(qouteArea.textContent);
-    qouteCounter++;
-    console.log(qouteCounter);
+    qouteArea.textContent = statements[qouteCounter];
+    if (qouteCounter < 3){
+        qouteCounter++;
+        setTimeout(function(){
+            qouteDislay(qouteCounter);
+        },3000);
+    }
+    if (qouteCounter == 3){
+        qouteCounter = 0;
+    }
 }
-qouteDislay();
+qouteDislay(0);
