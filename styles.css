@@ -1,0 +1,35 @@
+body{
+    align-content: center;
+}
+.slider-container{
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+.slider-message{
+    font-family: cursive;
+    font-weight: 100;
+    font-size: 15px;
+    color: aliceblue;
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    border-radius: 15px;
+    width: 550px;
+    height: 200px;
+    padding: 20px;
+}
+img{
+    border-radius: 100%;
+    position: relative;
+    top: 70px;
+    left: -15px;
+    width: 100px;
+    height: 100px;
+}
+h4 {
+    display: flex;
+    justify-content: left;
+    padding-left: 10px;
+}
