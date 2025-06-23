@@ -1,6 +1,6 @@
 const qouteArea = document.querySelector(".graph");
 const reciterArea = document.querySelector(".reciter");
-
+const imageArea = document.querySelector(".imgs");
 let imagesCenter = ["images/buggatti.jpeg","images/camero.jpeg","images/lambo.jpeg"];
 
 let statements = ["Bugatti is a French luxury hyper sports car manufacturer, renowned for its high-performance vehicles. Founded in 1909 by Ettore Bugatti",
@@ -10,9 +10,9 @@ let reciters = ["Teefe K","kadaada J","isma S"]
 
 function qouteDislay(count){
     let qouteCounter = count;
-    console.log(qouteArea.textContent);
     qouteArea.textContent = statements[qouteCounter];
     reciterArea.textContent = reciters[qouteCounter];
+    imageArea.src = imagesCenter[qouteCounter];
     if (qouteCounter < 3){
         qouteCounter++;
         setTimeout(function(){
