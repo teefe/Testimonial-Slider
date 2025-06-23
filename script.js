@@ -17,7 +17,7 @@ function qouteDislay(count){
         qouteCounter++;
         setTimeout(function(){
             qouteDislay(qouteCounter);
-        },3000);
+        },10000);
     }
     if (qouteCounter == 3){
         qouteCounter = 0;
